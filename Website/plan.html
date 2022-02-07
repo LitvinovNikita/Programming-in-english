@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan</title>
+    <link rel="stylesheet" href="plan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">Programming in english</div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li class="services">
+             <a href="launch.html">Launch</a>
+            </div>
+        </ul>
+    </nav>
+    
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <h4>0.0 Intro to Logic. Fun explanation of Logic</h4>
+        <h4> 1.0 Website Planning and installation of  development environment (Visual Studio Code)</h4>
+        <p>-Plan activities such as research, storyboards or brainstorming to develop user specifications.</p>
+        <p>-Create basic HTML markup using different HTML tags.</p>
+        <p>-Identify the best practices for website design and layouts.</p>
+        <p>*<a href="https://www.mockflow.com/">Mockflow </a> app for creating design</p> 
+        <p>Homework: create a design of the website in Mockflow </p>      
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <h4>2.0 HTML Structure</h4>
+        <p>- Build semantic webpage structure using HTML markup.</p>
+        <p>- Develop HTML code to incorporate text and graphics into the webpages.<p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <h4>3.0 Page Layouts and Design using CSS (Intro to CSS)</h4>
+        <p>3.1 Compare and contrast the three types of CSS, inline, internal and external, to enhance the design of webpages.</p>
+        <p>3.2 Use CSS rulesets to change the appearance of HTML elements on a webpage.</p>
+        <p>3.3 Use the CSS box model to change the normal flow of elements on a page.</p>
+        <p>3.4 Use CSS code to modify webpage layout.</p>
+        <h4>7.0 Advanced HTML and CSS</h4>
+        <p>  - 7.2 Make webpages responsive to different screen sizes.</p>
+    </div>
+    <button class="accordion">Section 4</button>
+    <div class="panel">
+        <h4>4.0 Lists, Links and Menus</h4>
+        <p> 4.1 Create alphabetical and numerical lists with HTML and CSS..</p>
+        <p>4.2 Create linked navigational structures such as menus to build user friendly multi-page websites.</p>
+        <p>4.3 Create different types of links such as internal and external to link webpages.</p>
+    </div>
+
+    <button class="accordion">Sections 5</button>
+    <div class="panel">
+        <h4> 5.0 Images Built into Webpages</h4>
+        <p> 5.1 Build webpages with images to enhance aesthetic appeal of webpages.</p>
+        <p> 5.2 Insert images that are in various formats to support the functionality of websites.</p>
+    </div>
+    <button class="accordion">Sections 6</button>
+    <div class="panel">
+        <h4>6.0 Forms using HTML and CSS</h4>
+        <p>6.1 Create forms using HTML code to accept user input.</p>
+        <p>6.2 Use appropriate form controls such as text boxes, radio buttons and dropdowns to minimize user input error.</p>
+        <p>6.3 Enhance the design of forms using CSS to improve user experience.</p>
+        <p>Apply appropriate HTML validation to user input fields.</p>
+    </div>
+    <button class="accordion">Sections 7</button>
+    <div class="panel">
+        <h4>2.0 HTML Structure</h4>
+        <p>2.3 Organize webpage content using tables.</p>
+        <h4>7.0 Advanced HTML and CSS</h4>
+        <p>7.1 Install code into webpages to allow streaming of audio and video from the Internet.</p>
+    </div>
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+            
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                }
+                else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+             });
+        }
+    </script>
+    
+
+
+</body>
+</html>
